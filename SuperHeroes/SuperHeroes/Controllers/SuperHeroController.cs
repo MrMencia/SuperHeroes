@@ -24,13 +24,14 @@ namespace SuperHeroes.Controllers
         {
             
             {
+               
                 SuperHeroe superhero = context.SuperHeroeCharacters.Where(i => i.Id == id).Single();
                 return View(superhero);
             }
             
         }
 
-        // GET: SuperHero/Create
+        // GET: SuperHero/Create (DONE)
         public ActionResult Create()
         {
             SuperHeroe superhero = new SuperHeroe();
@@ -38,7 +39,7 @@ namespace SuperHeroes.Controllers
             return View(superhero);
         }
 
-        // POST: SuperHero/Create
+        // POST: SuperHero/Create (DONE)
         [HttpPost]
         public ActionResult Create(SuperHeroe superHeroes)
         {
@@ -56,7 +57,7 @@ namespace SuperHeroes.Controllers
             }
         }
 
-        // GET: SuperHero/Edit/5
+        // GET: SuperHero/Edit/5 (DONE)
         public ActionResult Edit(int id)
         {
             {
@@ -68,10 +69,10 @@ namespace SuperHeroes.Controllers
                 }
                 return View(superhero);
             }
-            return View();
+            
         }
 
-        // POST: SuperHero/Edit/5
+        // POST: SuperHero/Edit/5 (DONE)
         [HttpPost]
         public ActionResult Edit(int id, SuperHeroe superhero)
         {
